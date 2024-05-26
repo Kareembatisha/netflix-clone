@@ -1,12 +1,18 @@
-import './HomeScreen.css'
+import Banner from "../../components/Banner/Banner";
+import NavBar from "../../components/NavBar/NavBar";
+import "./HomeScreen.css";
 function HomeScreen() {
-  return <div className="HomeScreen">
-    {/* nav */}
+  return (
+    <div className="HomeScreen">
+      {/* nav */}
+      <NavBar />
 
-    {/* banner */}
+      {/* banner */}
+      <Banner />
 
-    {/* row */}
-  </div>;
+      {/* row */}
+    </div>
+  );
 }
 
-export default HomeScreen
+export default HomeScreen;
