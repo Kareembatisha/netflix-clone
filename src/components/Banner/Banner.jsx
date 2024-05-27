@@ -1,6 +1,26 @@
+import { useEffect, useState } from "react";
 import "./Banner.css";
+import axios from "axios";
+import requests from "../../api/Requests";
 
 function Banner() {
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const request = await axios.get(requests.fetchNetflixOriginals);
+      setMovie(
+        request.data.results[
+          Math.floor(Math.random() * request.data.results.length - 1)
+        ]
+      );
+      return request;
+    };
+    fetchData();
+  }, []);
+
+
+
   const truncate = (string, n) => {
     return string?.length > n ? string.substr(0, n - 1) + " ..." : string;
   };
@@ -8,32 +28,27 @@ function Banner() {
     <header
       className="banner"
       style={{
-        backgroundImage: `url('https://wallpapers.com/images/hd/netflix-background-ay2odaz7o4zltn0q.jpg')`,
+        // @ts-ignore
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
       }}
     >
       <div className="banner_content">
-        <h1 className="banner_title">Movie name</h1>
+        <h1 className="banner_title">
+          {
+            // @ts-ignore
+            movie?.name
+          }
+        </h1>
         <div className="banner_buttons">
           <button className="banner_btn">play</button>
           <button className="banner_btn">my list</button>
         </div>
         <h1 className="banner_description">
-          {truncate(
-            ` this is the descriptionthis is the description this is the description
-          this is the description this is the description this is the
-          description this is the description this is the description this is
-          the description this is the description this is the description this
-          is the description this is the description this is the description
-          this is the description this is the description this is the
-          description this is the description this is the description this is
-          the description this is the description this is the description this
-          is the description this is the description this is the description
-          this is the description this is the description this is the
-          description`,
-            100
-          )}
+          {truncate(`${movie?.
+// @ts-ignore
+          overview}`, 200)}
         </h1>
       </div>
 
