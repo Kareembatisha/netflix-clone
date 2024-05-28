@@ -13,38 +13,48 @@ function HomeScreen() {
       <Banner />
 
       {/* row */}
-      <Row
-        title="Netflix_Originals"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row
-        title="ActionMovies"
-        fetchUrl={requests.fetchActionMovies}
-        isLargeRow
-      />
-      <Row
-        title="ComedyMovies"
-        fetchUrl={requests.fetchComedyMovies}
-        isLargeRow
-      />
-      <Row
-        title="Documentaries"
-        fetchUrl={requests.fetchDocumentaries}
-        isLargeRow
-      />
-      <Row
-        title="HorrorMovies"
-        fetchUrl={requests.fetchHorrorMovies}
-        isLargeRow
-      />
-      <Row
-        title="RomancyMovies"
-        fetchUrl={requests.fetchRomancyMovies}
-        isLargeRow
-      />
-      <Row title="TopRated" fetchUrl={requests.fetchTopRated} isLargeRow />
-      <Row title="Trending" fetchUrl={requests.fetchTrending} isLargeRow />
+      <div className="row_container">
+        <Row
+          title="Netflix Originals"
+          fetchUrl={requests.fetchNetflixOriginals}
+          isLargeRow={true}
+        />
+        <Row
+          title="ActionMovies"
+          fetchUrl={requests.fetchActionMovies}
+          isLargeRow={false}
+        />
+        <Row
+          title="ComedyMovies"
+          fetchUrl={requests.fetchComedyMovies}
+          isLargeRow={false}
+        />
+        <Row
+          title="Documentaries"
+          fetchUrl={requests.fetchDocumentaries}
+          isLargeRow={false}
+        />
+        <Row
+          title="HorrorMovies"
+          fetchUrl={requests.fetchHorrorMovies}
+          isLargeRow={false}
+        />
+        <Row
+          title="RomancyMovies"
+          fetchUrl={requests.fetchRomancyMovies}
+          isLargeRow={false}
+        />
+        <Row
+          title="TopRated"
+          fetchUrl={requests.fetchTopRated}
+          isLargeRow={false}
+        />
+        <Row
+          title="Trending"
+          fetchUrl={requests.fetchTrending}
+          isLargeRow={false}
+        />
+      </div>
     </div>
   );
 }
