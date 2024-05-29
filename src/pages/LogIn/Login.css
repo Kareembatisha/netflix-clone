@@ -36,3 +36,57 @@
     rgba(0, 0, 0, 0.8) 100%
   );
 }
+.login_body > h1 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.login_body > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.login_body > h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.login_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+}
+.login_input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 48px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+ 
+}
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  
+}
+
+.login_getStarted{
+  /* margin-top: 5px; */
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
