@@ -9,7 +9,7 @@ function Login() {
       <div className="login_background">
         <img
           className="login_logo"
-          src="src\assets\580b57fcd9996e24bc43c529.png"
+          src=".\580b57fcd9996e24bc43c529.png"
           alt=""
         />
         <button className="login_btn" onClick={() => setSignIn(true)}>

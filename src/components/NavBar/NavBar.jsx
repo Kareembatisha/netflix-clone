@@ -24,7 +24,7 @@ function NavBar() {
         <img
         onClick={()=>navigate('/')}
           className="nav_logo"
-          src="src\assets\580b57fcd9996e24bc43c529.png"
+          src=".\580b57fcd9996e24bc43c529.png"
           alt=""
         />
         <img onClick={()=>navigate('/profile')}
