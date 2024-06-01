@@ -34,3 +34,12 @@
   transform: scale(1.09);
   opacity: 1;
 }
+.loader-container {
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2002px;
+  width: 2000px; /* Adjust this height based on your layout */
+}
+}

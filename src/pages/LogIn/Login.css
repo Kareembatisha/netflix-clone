@@ -7,15 +7,15 @@
 }
 .login_logo {
   position: fixed;
-  left: 0;
-  width: 150px;
+  left: 40px ;
+  width: 250px;
   object-fit: contain;
-  padding-left: 20px;
+  padding-left: 20px ;
 }
 .login_btn {
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 30px;
   padding: 10px 20px;
   font-size: 1rem;
   color: white;

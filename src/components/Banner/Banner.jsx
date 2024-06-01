@@ -31,7 +31,7 @@ function Banner() {
         // @ts-ignore
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundSize: "cover",
-        backgroundPosition: "center center",
+        backgroundPosition: "center 20%",
       }}
     >
       <div className="banner_content">
@@ -43,12 +43,12 @@ function Banner() {
         </h1>
         <div className="banner_buttons">
           <button className="banner_btn">play</button>
-          <button className="banner_btn">my list</button>
+          <button className="banner_btn">More Info</button>
         </div>
         <h1 className="banner_description">
           {truncate(`${movie?.
 // @ts-ignore
-          overview}`, 200)}
+          overview}`, 400)}
         </h1>
       </div>
 

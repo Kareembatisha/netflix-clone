@@ -1,0 +1,26 @@
+/* NetflixLoader.css */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.loader-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #e50914; /* Netflix red color */
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: loader 0.6s infinite ease-in-out;
+}
+
+@keyframes loader {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}

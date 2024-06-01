@@ -1,18 +1,50 @@
+import { useRef } from "react";
+import { auth } from "../../../firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+
 import "./SignUp.css";
 function SignUp() {
+  const emailRef = useRef(null);
+  const passRef = useRef(null);
   const register = (e) => {
     e.preventDefault();
+    createUserWithEmailAndPassword(
+      auth,
+      emailRef.current.value,
+      passRef.current.value
+    )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   const signIn = (e) => {
     e.preventDefault();
+      e.preventDefault();
+      signInWithEmailAndPassword(
+        auth,
+        emailRef.current.value,
+        passRef.current.value
+      )
+        .then((authUser) => {
+          console.log(authUser);
+        })
+        .catch((error) => {
+         alert("user already exist");
+        });
   };
 
   return (
     <div className="SignUp">
       <form>
         <h1>Sign In</h1>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="password" />
+        <input ref={emailRef} type="email" placeholder="Email" />
+        <input ref={passRef} type="password" placeholder="password" />
         <button type="submit" onClick={signIn}>
           Sign In
         </button>

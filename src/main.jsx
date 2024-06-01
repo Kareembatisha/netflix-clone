@@ -1,18 +1,18 @@
 import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+// @ts-ignore
+import Profile from "./pages/Profile/Profile";
+import store from "./store"; // Import the Redux store
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
 import "./index.css";
-import Login from "./pages/LogIn/Login.jsx";
 
-const user = null;
+import App from "./App";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: user ? <App /> : <Login />,
-  },
-]);
+
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <App/>
+  </Provider>
 );
