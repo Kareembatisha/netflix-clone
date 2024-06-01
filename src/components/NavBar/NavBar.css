@@ -15,10 +15,12 @@
 }
 
 .nav_contant {
-  /* display: flex; */
+  display: flex;
   justify-content: space-between;
- 
+  align-items: center;
+  margin-top: 20px;
 }
+
 .nav_logo {
   position: fixed;
   left: 60;
@@ -33,4 +35,20 @@
   right: 60px;
   width: 40px;
   height: 40px;
+}
+
+@media screen and (max-width: 498px) {
+  .nav_contant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .nav_logo {
+    width: 100px;
+  }
+  .nav_avatar {
+    width: 30px;
+    height: 30px;
+  }
 }

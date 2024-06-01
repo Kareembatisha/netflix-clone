@@ -22,12 +22,13 @@ function NavBar() {
     <div className={`nav ${show && "nav_black"}`}>
       <div className="nav_contant">
         <img
-        onClick={()=>navigate('/')}
+          onClick={() => navigate("/")}
           className="nav_logo"
-          src=".\580b57fcd9996e24bc43c529.png"
+          src="src\components\NavBar\580b57fcd9996e24bc43c529.png"
           alt=""
         />
-        <img onClick={()=>navigate('/profile')}
+        <img
+          onClick={() => navigate("/profile")}
           className="nav_avatar"
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
           alt=""
